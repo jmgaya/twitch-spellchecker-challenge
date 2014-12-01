@@ -1,4 +1,4 @@
 Twitch spellchecker technical challenge
 ===========================
 
-Twitch technical problem url: http://www.twitch.tv/problems/spellcheck
+Works for words with non repeated consonants.
