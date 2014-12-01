@@ -1,4 +1,4 @@
-twitch-technical-challenges
+Twitch spellchecker technical challenge
 ===========================
 
-Twitch technical problem solutions extracted from: http://www.twitch.tv/problems
+Twitch technical problem url: http://www.twitch.tv/problems/spellcheck
