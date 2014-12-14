@@ -12,14 +12,20 @@ class MistakeBuilder():
 	def getMistake(self):
 		self.__toUpperCase()
 		self.__addRepeatedVowels()
+		self.__addRepeatedConsonants()
 		return self.mistake
 
 	def __toUpperCase(self):
 		self.mistake = self.mistake.upper()
 
 	def __addRepeatedVowels(self):
-		vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-		self.mistake = re.sub("[aeiouAEIOU]", vowels[random.randint(0,len(vowels)-1)]*random.randint(1,10), self.mistake)
+		self.mistake = re.sub("[AEIOU]", self.__repeatLetter, self.mistake)
+
+	def __addRepeatedConsonants(self):
+		self.mistake = re.sub("[B-DF-HJ-NP-TV-Z]", self.__repeatLetter, self.mistake)
+
+	def __repeatLetter(self, matchobj):
+		return matchobj.group(0)*random.randint(1,10)
 
 	def __getWord (self):
 		with open("/usr/share/dict/words") as f:
