@@ -4,10 +4,6 @@ import re
 import random
 from mistakebuilder import *
 
-# ==========================================================
-# Not implemented for words containing duplicated consonants
-# ==========================================================
-
 class SpellChecker():
 
 	def __init__(self):
